@@ -4,10 +4,72 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8bdfe815-1a17-4452-80d5-c62dff44b831" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+    <list default="true" id="8bdfe815-1a17-4452-80d5-c62dff44b831" name="Changes" comment="setup theme and font">
+      <change afterPath="$PROJECT_DIR$/app/fonts/Inter_VF.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/fonts/SpaceGrotesk_VF.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/account.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/arrow-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/arrow-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/arrow-up-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/au.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/avatar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/bronze-medal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/calendar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/carbon-location.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/chevron-down.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/chevron-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/clock-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/clock.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/computer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/currency-dollar-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/downvote.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/downvoted.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/edit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/eye.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/github.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/gold-medal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/google.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/hamburger.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/home.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/job-search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/like.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/location.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/message.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/mingcute-down-line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/moon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/question.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/sign-up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/silver-medal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/star-filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/star-red.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/star.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/stars.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/suitcase.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/sun.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/tag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/trash.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/upvote.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/upvoted.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/user.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/users.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/auth-dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/auth-light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/dark-error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/dark-illustration.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/default-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/light-error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/light-illustration.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logo-dark.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logo-light.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/site-logo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -25,61 +87,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000312831752" />
-      <entry key="S2" value="1.072553323604219" />
-      <entry key="S5" value="2.7871385626330096" />
-      <entry key="S10" value="6.4411015443029305" />
-      <entry key="S30" value="13.121500020308611" />
-      <entry key="S60" value="20.08230918785005" />
-      <entry key="M2" value="33.49532933717474" />
-      <entry key="M5" value="53.76334704373113" />
-      <entry key="M10" value="65.00781977146605" />
-      <entry key="M15" value="69.8755567382263" />
-      <entry key="M30" value="76.17554121803985" />
-      <entry key="H1" value="80.41276934450705" />
-      <entry key="H2" value="83.43885161681627" />
-      <entry key="H4" value="92.28156189693172" />
-      <entry key="D1" value="171.28652330400777" />
-      <entry key="W1" value="214.85022844927636" />
+      <entry key="MS100" value="1.0213469646686506" />
+      <entry key="MS500" value="1.5714698272782162" />
+      <entry key="S2" value="3.0652601548538416" />
+      <entry key="S5" value="5.193251660168728" />
+      <entry key="S10" value="6.954861450827044" />
+      <entry key="S30" value="8.821376608750663" />
+      <entry key="S60" value="9.957375647356688" />
+      <entry key="M2" value="12.473019931546423" />
+      <entry key="M5" value="18.578001766810697" />
+      <entry key="M10" value="24.8165771760228" />
+      <entry key="M15" value="28.94350470198535" />
+      <entry key="M30" value="36.59563379152195" />
+      <entry key="H1" value="44.05564776788667" />
+      <entry key="H2" value="54.542273816972695" />
+      <entry key="H4" value="76.73493437454724" />
+      <entry key="D1" value="195.91773438760004" />
+      <entry key="W1" value="269.5522068320729" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="4.739842077974687E-158" />
-      <entry key="S10" value="2.1771275835310298E-79" />
-      <entry key="S30" value="6.223398927528442E-27" />
-      <entry key="S60" value="1.0560194624347542E-13" />
-      <entry key="M2" value="6.1112787877524E-7" />
-      <entry key="M5" value="0.008266606624505707" />
-      <entry key="M10" value="0.20217189781539638" />
-      <entry key="M15" value="0.5883357124243122" />
-      <entry key="M30" value="1.7141492972245398" />
-      <entry key="H1" value="2.927237295289155" />
-      <entry key="H2" value="3.8434266531694483" />
-      <entry key="H4" value="4.672281272306442" />
-      <entry key="D1" value="8.015769355397419" />
-      <entry key="W1" value="9.659619567154765" />
+      <entry key="S2" value="7.366097438021243E-144" />
+      <entry key="S5" value="6.39453478598659E-58" />
+      <entry key="S10" value="3.55437883151165E-29" />
+      <entry key="S30" value="7.458579865138514E-10" />
+      <entry key="S60" value="5.751574718601711E-5" />
+      <entry key="M2" value="0.01664110618452478" />
+      <entry key="M5" value="0.5093813649743271" />
+      <entry key="M10" value="1.6823652346782854" />
+      <entry key="M15" value="2.675353794854629" />
+      <entry key="M30" value="4.725816911884034" />
+      <entry key="H1" value="6.703686744809018" />
+      <entry key="H2" value="8.359566786865217" />
+      <entry key="H4" value="10.154854320149882" />
+      <entry key="D1" value="16.175719684560725" />
+      <entry key="W1" value="19.318477136660565" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9726549474122855" />
-      <entry key="MS500" value="0.9944701997074207" />
-      <entry key="S2" value="1.0710020288751532" />
-      <entry key="S5" value="2.784703998971192" />
-      <entry key="S10" value="6.437799928027416" />
-      <entry key="S30" value="13.118890094169128" />
-      <entry key="S60" value="20.07989693735444" />
-      <entry key="M2" value="33.493093411516945" />
-      <entry key="M5" value="53.76994677400445" />
-      <entry key="M10" value="65.20686537794201" />
-      <entry key="M15" value="70.45893523872331" />
-      <entry key="M30" value="77.88306678912109" />
-      <entry key="H1" value="83.33446961368638" />
-      <entry key="H2" value="87.27865223899079" />
-      <entry key="H4" value="96.95149862719923" />
-      <entry key="D1" value="179.30138139480363" />
-      <entry key="W1" value="224.509678808017" />
+      <entry key="MS100" value="0.9935625632625547" />
+      <entry key="MS500" value="1.563313465579831" />
+      <entry key="S2" value="3.0599055523129977" />
+      <entry key="S5" value="5.187567515305529" />
+      <entry key="S10" value="6.95039634640975" />
+      <entry key="S30" value="8.819308869629797" />
+      <entry key="S60" value="9.956285853804925" />
+      <entry key="M2" value="12.488776238910916" />
+      <entry key="M5" value="19.08415524252296" />
+      <entry key="M10" value="26.493933767762734" />
+      <entry key="M15" value="31.613577955188504" />
+      <entry key="M30" value="41.31677258853501" />
+      <entry key="H1" value="50.755984763077294" />
+      <entry key="H2" value="62.899590999296684" />
+      <entry key="H4" value="86.88808301606113" />
+      <entry key="D1" value="212.09252676617334" />
+      <entry key="W1" value="288.8704905234049" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -87,6 +149,9 @@
   &quot;fromUser&quot;: false
 }</component>
   <component name="ProjectId" id="3KwApqWaJopqyDvLQVa0RXyCVhB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -101,17 +166,29 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "javascript.preferred.runtime.type.id": "node",
+    "last_opened_file_path": "C:/Users/Ahmed/DEV/nextjs_deom",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/Ahmed/DEV/nextjs_deom/src/main.ts",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Ahmed\\DEV\\nextjs_deom\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "ide.date.format",
     "ts.external.directory.path": "C:\\Users\\Ahmed\\DEV\\nextjs_deom\\node_modules\\typescript\\lib"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ahmed\DEV\nextjs_deom" />
+      <recent name="C:\Users\Ahmed\DEV\nextjs_deom\app\fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ahmed\DEV\nextjs_deom\app\fonts" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -126,11 +203,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1792458444125</updated>
-      <workItem from="1792458444618" duration="6396000" />
+      <workItem from="1792458444618" duration="14402000" />
     </task>
+    <task id="LOCAL-00001" summary="setup plugins settings">
+      <option name="closed" value="true" />
+      <created>1792521681721</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1792521681721</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="setup plugins settings" />
+    <MESSAGE value="setup theme and font" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup theme and font" />
   </component>
 </project>
