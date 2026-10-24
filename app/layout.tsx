@@ -3,22 +3,21 @@ import "./globals.css";
 import localFont from "next/font/local";
 import ThemeProvider from "@/context/theme";
 import { cn } from "@/lib/utils";
-import Navbar from "@/components/navigation/navbar";
-
+import { Toaster } from "@/components/ui/sonner";
+import { SessionProvider } from "next-auth/react";
+import { auth } from "@/auth";
 
 const inter = localFont({
-  src:"./fonts/Inter_VF.ttf",
+  src: "./fonts/Inter_VF.ttf",
   variable: "--font-inter",
-  weight:"100 200 300 400 500 600 700 800 900"
-})
-
+  weight: "100 200 300 400 500 600 700 800 900",
+});
 
 const spaceGrotesk = localFont({
   src: "./fonts/SpaceGrotesk_VF.ttf",
   variable: "--font-space-grotesk",
   weight: "100 200 300 400 500 600 700",
 });
-
 
 export const metadata: Metadata = {
   title: "Dev Overflow",
@@ -29,21 +28,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const session = await auth();
+
   return (
     <html lang="en" suppressHydrationWarning className={cn("font-sans", inter.variable)}>
-      <body
-          className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
-          >
-              <ThemeProvider
-                  attribute="class"
-                  defaultTheme="system"
-                  enableSystem
-                  disableTransitionOnChange>
-                  <Navbar />
-                 {children}
-              </ThemeProvider>
-      </body>
+      <SessionProvider session={session}>
+        <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+            {children}
+          </ThemeProvider>
+          <Toaster />
+        </body>
+      </SessionProvider>
     </html>
   );
 }
