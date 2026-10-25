@@ -1,6 +1,5 @@
-import { auth, signOut } from "@/auth";
-import { Button } from "@/components/ui/button";
-import ROUTES from "@/constants/routes";
+import { auth } from "@/auth";
+
 
 
 const Home = async () => {
@@ -9,15 +8,7 @@ const Home = async () => {
     return (
       <>
         <div className='h1-bold' >Welcome Home of the app</div>
-            <form
-                className="px-10 pt-38"
-                action={async () => { 
-                    "use server";
-                    await signOut({redirectTo:ROUTES.SIGN_IN});
-                }}
-            >
-                <Button type="submit">Sign Out</Button>
-            </form>
+         
       </>
     )
 }
