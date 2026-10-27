@@ -6,7 +6,7 @@ import { DefaultValues, FieldValues, Path, SubmitHandler, useForm } from "react-
 import { z, ZodType } from "zod";
 
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/context/form";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import ROUTES from "@/constants/routes";
 
