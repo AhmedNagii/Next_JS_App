@@ -8,6 +8,15 @@ const nextConfig: NextConfig = {
     turbopackFileSystemCacheForDev:true
   },
   cacheComponents: false,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "static.vecteezy.com",
+        port: "",
+      },
+    ],
+  },
   turbopack: {
     rules: {
       "*.css": {
