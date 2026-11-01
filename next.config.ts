@@ -1,8 +1,10 @@
+import path from "path";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
+  serverExternalPackages: ["pino", "pino-pretty"],
   experimental: {
     agentFeedback: true,
     turbopackFileSystemCacheForDev:true
@@ -18,6 +20,7 @@ const nextConfig: NextConfig = {
     ],
   },
   turbopack: {
+    root: path.resolve(__dirname),
     rules: {
       "*.css": {
         loaders: ["@tailwindcss/turbopack"],
