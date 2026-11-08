@@ -30,7 +30,6 @@ const dbConnect = async (): Promise<Mongoose> => {
   }
 
   if (!cached.promise) {
-    logger.info("Creating new mongoose connection");
     cached.promise = mongoose
       .connect(MONGODB_URI, {
         dbName: "devflow",
@@ -40,12 +39,17 @@ const dbConnect = async (): Promise<Mongoose> => {
         return result;
       })
       .catch((error) => {
-        logger.error({ err: error }, "Error connecting to MongoDB");
+        logger.error("Error connecting to MongoDB", error);
         throw error;
       });
   }
 
-  cached.conn = await cached.promise;
+  try {
+    cached.conn = await cached.promise;
+  } catch (error) {
+    cached.promise = null; // allow the next request to retry instead of reusing the failed attempt
+    throw error;
+  }
 
   return cached.conn;
 };
