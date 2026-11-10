@@ -24,7 +24,7 @@ const Editor = dynamic(() => import("@/components/editor"), {
   ssr: false,
 });
 
-const QuestionForm = ({ question, isEdit }: { question: Question; isEdit: boolean }) => {
+const QuestionForm = ({ question, isEdit = false }: { question?: Question; isEdit: boolean }) => {
   const router = useRouter();
   const editorRef = useRef<MDXEditorMethods>(null);
   const [isPending, startTransition] = useTransition();
@@ -84,7 +84,7 @@ const QuestionForm = ({ question, isEdit }: { question: Question; isEdit: boolea
             description: "Question updated successfully",
           });
 
-          if (result.data) router.push(ROUTES.QUESTIONS(result.data._id));
+          if (result.data) router.push(ROUTES.QUESTIONS(String(result.data?._id)));
         } else {
           toast.error(`Error ${result.status}`, {
             description: result.error?.message || "Something went wrong",
