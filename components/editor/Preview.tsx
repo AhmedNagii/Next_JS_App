@@ -8,16 +8,22 @@ Code.theme = {
 };
 
 export const Preview = ({ content }: { content: string }) => {
-  const formattedContent = content.replace(/\\/g, "").replace(/&#x20;/g, "");
+    const formattedContent = content.replace(/\\/g, "").replace(/&#x20;/g, "");
 
-  return (
-    <section className="markdown prose wrap-break-words grid">
-      <MDXRemote
-        source={formattedContent}
-        components={{
-          pre: (props) => <Code {...props} lineNumbers className="shadow-light-200 dark:shadow-dark-200" />,
-        }}
-      />
-    </section>
-  );
-};
+    return (
+        <section className="markdown prose wrap-break-words grid min-w-0">
+            <MDXRemote
+                source={formattedContent}
+                components={{
+                    pre: (props) => (
+                        <Code
+                            {...props}
+                            lineNumbers
+                            className="shadow-light-200 dark:shadow-dark-200"
+                        />
+                    ),
+                }}
+            />
+        </section>
+    )
+}
