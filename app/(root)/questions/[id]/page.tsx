@@ -13,6 +13,7 @@ import { formatNumber, getTimeStamp } from "@/lib/utils";
 import UserAvatar from "@/components/ui/UserAvatar";
 import Metric from "@/components/ui/Metric";
 import AnswerForm from "@/components/forms/AnswerFrom";
+import Votes from "@/components/votes/Votes";
 
 const QuestionDetails = async ({ params }: RouteParams) => {
   const { id } = await params;
@@ -49,7 +50,7 @@ const QuestionDetails = async ({ params }: RouteParams) => {
           </div>
 
           <div className="flex justify-end">
-            <p>Votes</p>
+            <Votes upvotes={question.upvotes} hasupVoted={true} downvotes={question.downvotes} hasdownVoted />
           </div>
         </div>
 
@@ -98,7 +99,7 @@ const QuestionDetails = async ({ params }: RouteParams) => {
       </section>
 
       <section className="my-5">
-              <AnswerForm questionId={question._id} questionTitle={question.title} questionContent={ question.content} />
+        <AnswerForm questionId={question._id} questionTitle={question.title} questionContent={question.content} />
       </section>
     </>
   );
