@@ -16,6 +16,7 @@ import AnswerForm from "@/components/forms/AnswerFrom";
 import Votes from "@/components/votes/Votes";
 import { hasVoted } from "@/lib/actions/vote.action";
 import SaveQuestion from "@/components/questions/SaveQuestion";
+import { hasSavedQuestion } from "@/lib/actions/collection.action";
 
 const QuestionDetails = async ({ params }: RouteParams) => {
   const { id } = await params;
@@ -27,6 +28,9 @@ const QuestionDetails = async ({ params }: RouteParams) => {
 
   if (!success || !question) return redirect("/404");
 
+  const hasSavedQuestionPromise = hasSavedQuestion({
+    questionId: question._id,
+  });
   const {
     success: areAnswersLoaded,
     data: answersResult,
@@ -63,7 +67,7 @@ const QuestionDetails = async ({ params }: RouteParams) => {
               />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
-              <SaveQuestion questionId={question._id} />
+              <SaveQuestion questionId={question._id} hasSavedQuestionPromise={hasSavedQuestionPromise} />
             </Suspense>
           </div>
         </div>
