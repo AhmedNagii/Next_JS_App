@@ -3,7 +3,7 @@ import Link from "next/link";
 import Theme from "./Theme";
 import MobileNavigation from "./MobileNavigation";
 import { auth } from "@/auth";
-import UserAvatar from "@/components/ui/UserAvatar";
+import UserAvatar from "@/components/UserAvatar";
 
 const Navbar = async () => {
   const session = await auth();

@@ -4,7 +4,7 @@ import ROUTES from "@/constants/routes";
 import { getTimeStamp } from "@/lib/utils";
 
 import { Preview } from "../editor/Preview";
-import UserAvatar from "../ui/UserAvatar";
+import UserAvatar from "../UserAvatar";
 import { Suspense } from "react";
 import Votes from "../votes/Votes";
 import { hasVoted } from "@/lib/actions/vote.action";

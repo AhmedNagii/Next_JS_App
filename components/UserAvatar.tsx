@@ -4,7 +4,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 import ROUTES from "@/constants/routes";
-import { Avatar, AvatarFallback } from "./avatar";
+import { Avatar, AvatarFallback } from "./ui/avatar";
 
 
 interface Props {
