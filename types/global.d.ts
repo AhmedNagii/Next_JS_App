@@ -59,6 +59,7 @@ interface Answer {
   createdAt: Date;
   downvotes: number;
   upvotes: number;
+  question: string;
 }
 interface User {
   _id: string;
