@@ -1,16 +1,24 @@
 import { auth } from "@/auth";
 import ProfileLink from "@/components/user/ProfileLink";
 import UserAvatar from "@/components/UserAvatar";
-import { getUser } from "@/lib/actions/user.action";
+import { getUser, getUserQuestions } from "@/lib/actions/user.action";
 import { notFound } from "next/navigation";
 import dayjs from "dayjs";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Stats from "@/components/user/Stats";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import page from "../../page";
+import DataRenderer from "@/components/DataRenderer";
+import { EMPTY_QUESTION } from "@/constants/states";
+import QuestionCard from "@/components/cards/QuestionCard";
+import Pagination from "@/components/Pagination";
 
-const Profile = async ({ params }: RouteParams) => {
+const Profile = async ({ params, searchParams }: RouteParams) => {
+  // /12312313
   const { id } = await params;
+  // ?id=1&page=1&pageSize=10
+  const { page, pageSize } = await searchParams;
 
   if (!id) notFound();
 
@@ -27,6 +35,19 @@ const Profile = async ({ params }: RouteParams) => {
     );
 
   const { user, totalQuestions, totalAnswers } = data!;
+
+  const {
+    success: userQuestionsSuccess,
+    data: userQuestions,
+    error: userQuestionsError,
+  } = await getUserQuestions({
+    userId: id,
+    page: Number(page) || 1,
+    pageSize: Number(pageSize) || 10,
+  });
+
+  const { questions, isNext: hasMoreQuestions } = userQuestions!;
+
   const { _id, name, image, portfolio, location, createdAt, username, bio } = user;
 
   return (
@@ -75,9 +96,10 @@ const Profile = async ({ params }: RouteParams) => {
           BRONZE: 0,
         }}
       />
-      <section className="mt-10 flex gap-15">
+
+      <section className="mt-10 flex gap-10">
         <Tabs defaultValue="top-posts" className="flex-2">
-          <TabsList className="background-light800_dark400 dark:background-dark400_light900 min-h-10.5 flex gap-2 p-1">
+          <TabsList className="background-light800_dark400 dark:background-dark400_light900 min-h-10.5 p-1">
             <TabsTrigger value="top-posts" className="tab">
               Top Posts
             </TabsTrigger>
@@ -86,8 +108,23 @@ const Profile = async ({ params }: RouteParams) => {
             </TabsTrigger>
           </TabsList>
           <TabsContent value="top-posts" className="mt-5 flex w-full flex-col gap-6">
-            List of Questions
+            <DataRenderer
+              data={questions}
+              empty={EMPTY_QUESTION}
+              success={userQuestionsSuccess}
+              error={userQuestionsError}
+              render={(hotQuestions) => (
+                <div className="flex w-full flex-col gap-6">
+                  {questions.map((question) => (
+                    <QuestionCard key={question._id} question={question} />
+                  ))}
+                </div>
+              )}
+            />
+
+            <Pagination page={page} isNext={hasMoreQuestions} />
           </TabsContent>
+
           <TabsContent value="answers" className="flex w-full flex-col gap-6">
             List of Answers
           </TabsContent>
