@@ -77,3 +77,7 @@ interface Collection {
   author: string | Author;
   question: Question;
 }
+
+interface GetUserParams {
+  userId: string;
+}
