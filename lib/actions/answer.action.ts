@@ -10,6 +10,8 @@ import Answer, { IAnswerDoc } from "@/database/answer.model";
 import action from "../handlers/action";
 import handleError from "../handlers/error";
 import { AnswerServerSchema, DeleteAnswerSchema, GetAnswersSchema } from "../validations";
+import { createInteraction } from "./interaction.action";
+import { after } from "next/server";
 
 export async function createAnswer(params: CreateAnswerParams): Promise<ActionResponse<IAnswerDoc>> {
   const validationResult = await action({
@@ -29,6 +31,7 @@ export async function createAnswer(params: CreateAnswerParams): Promise<ActionRe
   session.startTransaction();
 
   try {
+
     const question = await Question.findById(questionId);
 
     if (!question) throw new Error("Question not found");
@@ -52,7 +55,14 @@ export async function createAnswer(params: CreateAnswerParams): Promise<ActionRe
     await session.commitTransaction();
 
     revalidatePath(ROUTES.QUESTIONS(questionId));
-
+    after(async () => {
+      await createInteraction({
+        action: "post",
+        actionId: question._id.toString(),
+        actionTarget: "question",
+        authorId: userId as string,
+      });
+    });
     return {
       success: true,
       data: JSON.parse(JSON.stringify(newAnswer)),

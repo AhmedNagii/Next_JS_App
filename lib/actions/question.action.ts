@@ -16,11 +16,11 @@ import {
   IncrementViewsSchema,
   PaginatedSearchParamsSchema,
 } from "../validations";
-import ROUTES from "@/constants/routes";
 import { revalidatePath } from "next/cache";
 import dbConnect from "../mongoose";
-import { NextResponse } from "next/server";
+import { after } from "next/server";
 import { Answer, Collection, Vote } from "@/database";
+import { createInteraction } from "./interaction.action";
 
 export async function createQuestion(params: CreateQuestionParams): Promise<ActionResponse<Question>> {
   const validationResult = await action({
@@ -40,6 +40,14 @@ export async function createQuestion(params: CreateQuestionParams): Promise<Acti
   session.startTransaction();
 
   try {
+    after(async () => {
+      await createInteraction({
+        action: "post",
+        actionId: question._id.toString(),
+        actionTarget: "question",
+        authorId: userId as string,
+      });
+    });
     const [question] = await Question.create([{ title, content, author: userId }], { session });
 
     if (!question) {

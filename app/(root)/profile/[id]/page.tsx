@@ -1,7 +1,7 @@
 import { auth } from "@/auth";
 import ProfileLink from "@/components/user/ProfileLink";
 import UserAvatar from "@/components/UserAvatar";
-import { getUser, getUserQuestions, getUsersAnswers, getUserTopTags } from "@/lib/actions/user.action";
+import { getUser, getUserQuestions, getUsersAnswers, getUserStats, getUserTopTags } from "@/lib/actions/user.action";
 import { notFound } from "next/navigation";
 import dayjs from "dayjs";
 import { Button } from "@/components/ui/button";
@@ -67,7 +67,7 @@ const Profile = async ({ params, searchParams }: RouteParams) => {
   const { questions, isNext: hasMoreQuestions } = userQuestions!;
   const { answers, isNext: hasMoreAnswers } = userAnswers!;
   const { tags } = userTopTags!;
-
+  const { data: userStats } = await getUserStats({ userId: id });
   const { _id, name, image, portfolio, location, createdAt, username, bio } = user;
 
   return (
@@ -110,11 +110,8 @@ const Profile = async ({ params, searchParams }: RouteParams) => {
       <Stats
         totalQuestions={totalQuestions}
         totalAnswers={totalAnswers}
-        badges={{
-          GOLD: 0,
-          SILVER: 0,
-          BRONZE: 0,
-        }}
+        reputationPoints={user.reputation || 0}
+        badges={userStats?.badges || { GOLD: 0, SILVER: 0, BRONZE: 0 }}
       />
 
       <section className="mt-10 flex gap-10">

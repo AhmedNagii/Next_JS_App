@@ -1,3 +1,5 @@
+"use server";
+
 import { QueryFilter } from "mongoose";
 import action from "../handlers/action";
 import handleError from "../handlers/error";
